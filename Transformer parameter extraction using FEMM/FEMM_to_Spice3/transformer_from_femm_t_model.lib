@@ -1,0 +1,10 @@
+.subckt transformer_from_femm_t_model 1 2 3 4 
+.params Rpri=0.003655391180088426 Rsec=0.02248173351737796 Lleak1=4.209154159179405e-007 Lleak2=3.792263307248448e-007 Lm=9.374895791475526e-006 n=4
+R1 9 1 {Rpri} 
+L1 9 5 {Lleak1} 
+R2 10 3 {Rsec} 
+L2 10 7 {Lleak2}
+Gp 2 5 value={n*i(Es)}
+Es 7 4 value={n*V(5,2)}
+L3 5 2 {Lm}
+.end transformer_from_femm_t_model 

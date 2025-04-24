@@ -1,0 +1,8 @@
+.subckt transformer_from_femm_standard_SPICE 1 2 3 4 
+.params Rpri=0.003655391180088426 Rsec=0.02248173351737796 L1=9.795811207393466e-006 L2=0.0001503775589943333 k=0.9770453487521892
+L1 5 2 {L1}
+L2 6 4 {L2}
+R1 5 1 {Rpri}
+R2 3 6 {Rsec}
+K1 L1 L2 {k}
+.end transformer_from_femm_standard_SPICE 

@@ -1,0 +1,9 @@
+.subckt transformer_from_femm_cantilever_model 1 2 3 4 
+.params Rpri=0.003655391180088426 Rsec=0.02248173351737796 Lleak=4.445572901158254e-007 Lpri=9.351253917277642e-006 Ne=4.010112814562421
+R1 9 1 {Rpri}
+L1 9 5 {Lleak}
+R2 7 3 {Rsec}
+Gp 2 5 value={Ne*i(Es)}
+Es 7 4 value={Ne*v(5,2)}
+L3 5 2 {Lpri}
+.end transformer_from_femm_cantilever_model 
