@@ -1,0 +1,14 @@
+.subckt FEMM-2D-AS-HMSC-HMTW_three_winding_transformer_from_femm_t_model 1 2 3 4 5 6
+.params Rpri=0.02355506349963211 Rsec1=0.2331684652134409 Rsec2=0.2973401249450359 Lleak1=3.124638841933917e-007 Lleak2=1.793032964955902e-006 Lleak3=2.134951148403178e-006 Lm=1.601821897729025e-005 n1=1.98803683332308 n2=2.001855298362751
+R1 15 1 {Rpri} 
+L1 15 7 {Lleak1} 
+R2 11 3 {Rsec1} 
+L2 11 9 {Lleak2} 
+Gp1 2 7 value={n1*i(Es1)} 
+Es1 9 4 value={n1*v(7,2)} 
+L3 7 2 {Lm} 
+R3 14 5 {Rsec2} 
+L4 14 12 {Lleak3} 
+Es2 12 6 value={n2*v(7,2)} 
+Gp2 2 7 value={n2*i(Es2)} 
+.end FEMM-2D-AS-HMSC-HMTW_three_winding_transformer_from_femm_t_model 
